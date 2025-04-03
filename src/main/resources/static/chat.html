@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.5.0/dist/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <!-- Секция онлайн-пользователей -->
+    <div class="users-panel">
+        <h3>Online Users (<span id="online-count">0</span>)</h3>
+        <ul id="users-list"></ul>
+    </div>
+
+    <!-- Основной чат -->
+    <div class="chat-panel">
+        <div id="messages" class="messages"></div>
+        <div class="input-area">
+            <input type="text" id="message-input" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</div>
+
+<script src="/js/chat.js"></script>
+</body>
+</html>
